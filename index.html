@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In or Create Account</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            font-family: "Ubuntu", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="w-[100vw] lg:h-[100vh] flex items-center justify-center">
+    <div id="main-page" class="main lg:w-[60vw] auto flex flex-col lg:flex-row">
+        <div class="bg-[#F6F6F6] flex-1">
+            <div class="flex justify-between w-[80%] mx-auto p-4 text-black font-bold">
+                <button id="loadLogIn" onclick="openLogInPage()"
+                    class="text-[20px] border-b-2 hover:border-cyan-700 duration-300">
+                    Log
+                    In</button>
+                <button id="loadCreateAccount" onclick="openNewAccountPage()"
+                    class="text-[20px] border-b-2 hover:border-cyan-700 duration-300">
+                    Create
+                    Account</button>
+            </div>
+            <div id="LogInPage" class="w-[70%] mx-auto py-4 space-y-4">
+                <h2 class="text-blue-600 font-black text-[24px]">
+                    AR Brand
+                </h2>
+                <h1 class="flex flex-col gap-1 text-[20px] font-semibold">
+                    <span class="text-[30px] font-bold">
+                        Sign Into
+                    </span>
+                    Your Account
+                </h1>
+                <div class="flex items-start flex-col  gap-4">
+                    <input class="w-full py-2 rounded-lg outline-gray-400 px-3" type="text"
+                        placeholder="Enter your name here" id="name">
+                    <input class="w-full py-2 rounded-lg outline-gray-400 px-3" type="password" name="" id="password"
+                        placeholder="Enter password here">
+                    <button onclick="signIn()"
+                        class="w-[80%] mx-auto bg-sky-600 text-white font-bold text-[18px] py-2 rounded-lg hover:bg-sky-700 duration-300">Sign
+                        In</button>
+                </div>
+            </div>
+
+            <div id="newAccountPage">
+                <div id="LogInPage" class="w-[70%] mx-auto py-4 space-y-4">
+                    <h2 class="text-blue-600 font-black text-[24px]">
+                        AR Brand
+                    </h2>
+                    <h1 class="flex flex-col gap-1 text-[28px] font-semibold">
+                        Create Your Account
+                    </h1>
+                    <div class="flex items-start flex-col  gap-4">
+                        <input id="newName" class="w-full py-2 rounded-lg outline-gray-400 px-3" type="text"
+                            placeholder="Enter your name here">
+                        <input class="w-full py-2 rounded-lg outline-gray-400 px-3" type="password" name=""
+                            id="newPassword" placeholder="Enter password here">
+                        <button onclick="createAccount()"
+                            class="w-[80%] mx-auto bg-sky-600 text-white font-bold text-[18px] py-2 rounded-lg hover:bg-sky-700 duration-300">Create
+                            Account</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex-1 flex items-center justify-center">
+            <img src="./images/Component 1.png" alt="">
+        </div>
+    </div>
+
+    <div id="blog" class="hidden text-5xl font-black">
+        <h1>
+            Hello World!
+        </h1>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
